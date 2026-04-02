@@ -1,0 +1,13 @@
+{
+  "appId": "com.bunkrdl.app",
+  "appName": "Bunkr DL",
+  "webDir": "src",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "CapacitorHttp": {
+      "enabled": true
+    }
+  }
+}

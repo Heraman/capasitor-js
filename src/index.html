@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Bunkr DL</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-icon">⬇</div>
+      <div>
+        <h1 class="header-title">Bunkr DL</h1>
+        <p class="header-sub">Download album & file langsung di HP</p>
+      </div>
+    </header>
+
+    <!-- INPUT -->
+    <section class="card input-card">
+      <label class="input-label">URL Bunkr</label>
+      <div class="input-row">
+        <input
+          id="urlInput"
+          type="url"
+          placeholder="https://bunkr.sk/a/... atau /v/..."
+          autocomplete="off"
+          autocorrect="off"
+          spellcheck="false"
+        />
+        <button id="pasteBtn" class="btn-icon" title="Paste">📋</button>
+      </div>
+      <button id="downloadBtn" class="btn-primary">
+        <span id="btnText">Mulai Download</span>
+        <span id="btnSpinner" class="spinner hidden"></span>
+      </button>
+    </section>
+
+    <!-- PROGRESS (hidden until download starts) -->
+    <section id="progressSection" class="card hidden">
+      <div class="progress-header">
+        <span id="progressLabel">Memproses...</span>
+        <span id="progressCount" class="progress-count"></span>
+      </div>
+      <div class="progress-bar-track">
+        <div id="progressBar" class="progress-bar-fill" style="width:0%"></div>
+      </div>
+      <div id="currentFile" class="current-file"></div>
+    </section>
+
+    <!-- LOG -->
+    <section id="logSection" class="card hidden">
+      <div class="log-header">
+        <span class="log-title">Log</span>
+        <button id="clearLogBtn" class="btn-clear">Hapus</button>
+      </div>
+      <div id="logContainer" class="log-container"></div>
+    </section>
+
+    <!-- RESULT -->
+    <section id="resultSection" class="card hidden">
+      <div id="resultContent"></div>
+    </section>
+
+  </div>
+
+  <!-- Capacitor core WAJIB sebelum app.js -->
+  <!-- JANGAN pakai type="module" — tidak support di Capacitor WebView tanpa bundler -->
+  <script src="app.js"></script>
+
+</body>
+</html>

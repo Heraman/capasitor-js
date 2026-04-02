@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Bunkr DL</string>
+    <string name="title_activity_main">Bunkr DL</string>
+    <string name="package_name">com.bunkrdl.app</string>
+    <string name="custom_url_scheme">com.bunkrdl.app</string>
+</resources>
